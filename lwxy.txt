@@ -1,0 +1,10 @@
+L -> Y L
+L -> Y
+W -> y
+W -> x
+W -> y X
+W -> x Y
+X -> x W
+X -> y X X
+Y -> y W
+Y -> x Y Y

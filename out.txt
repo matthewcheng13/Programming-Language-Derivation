@@ -1,0 +1,154 @@
+>> python3 derive.py Binary.txt -d
+
+N = N D
+  = N D D
+  = D D D
+  = 0 D D
+  = 0 0 D
+  = 0 0 0
+
+N = N D
+  = N D D
+  = D D D
+  = 0 D D
+  = 0 0 D
+  = 0 0 1
+
+N = N D
+  = N D D
+  = D D D
+  = 0 D D
+  = 0 1 D
+  = 0 1 0
+
+N = N D
+  = N D D
+  = D D D
+  = 0 D D
+  = 0 1 D
+  = 0 1 1
+
+N = N D
+  = N D D
+  = D D D
+  = 1 D D
+  = 1 0 D
+  = 1 0 0
+
+N = N D
+  = N D D
+  = D D D
+  = 1 D D
+  = 1 0 D
+  = 1 0 1
+
+N = N D
+  = N D D
+  = D D D
+  = 1 D D
+  = 1 1 D
+  = 1 1 0
+
+N = N D
+  = N D D
+  = D D D
+  = 1 D D
+  = 1 1 D
+  = 1 1 1
+
+# of strings generated: 8
+
+
+>> python3 derive.py -l5 Binary.txt
+
+0 0 0 0 0
+0 0 0 0 1
+0 0 0 1 0
+0 0 0 1 1
+0 0 1 0 0
+0 0 1 0 1
+0 0 1 1 0
+0 0 1 1 1
+0 1 0 0 0
+0 1 0 0 1
+0 1 0 1 0
+0 1 0 1 1
+0 1 1 0 0
+0 1 1 0 1
+0 1 1 1 0
+0 1 1 1 1
+1 0 0 0 0
+1 0 0 0 1
+1 0 0 1 0
+1 0 0 1 1
+1 0 1 0 0
+1 0 1 0 1
+1 0 1 1 0
+1 0 1 1 1
+1 1 0 0 0
+1 1 0 0 1
+1 1 0 1 0
+1 1 0 1 1
+1 1 1 0 0
+1 1 1 0 1
+1 1 1 1 0
+1 1 1 1 1
+
+# of strings generated: 32
+
+
+>> python3 derive.py -d Ambig.txt
+
+expr = ( expr )
+     = ( id )
+
+expr = expr + expr
+     = id + expr
+     = id + id
+
+# of strings generated: 2
+
+
+>> python3 derive.py -l7 Ambig.txt
+
+( ( ( id ) ) )
+( ( id ) ) + id
+( id ) + ( id )
+id + ( ( id ) )
+( ( id ) + id )
+( id + ( id ) )
+( ( id + id ) )
+( id ) + id + id
+id + ( id ) + id
+id + id + ( id )
+( id + id ) + id
+id + ( id + id )
+( id + id + id )
+id + id + id + id
+
+# of strings generated: 14
+
+
+>> python3 derive.py -l6 lwxy.txt
+
+y y x y x y
+y y x y x x
+y y x x y y
+y y x x y x
+y x y y x y
+y x y y x x
+y x y x y y
+y x y x y x
+y y y y x y
+y y y y x x
+y y y x y y
+y y y x y x
+y y x y y y
+y y x y y x
+y x y y y y
+y x y y y x
+y y y y y y
+y y y y y x
+
+# of strings generated: 18
+
